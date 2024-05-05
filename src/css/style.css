@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    background: linear-gradient(to bottom right, #121212, #1c1c1c);
+}
+
+h1, h2 {
+    color: #fffffff1;
+    letter-spacing: -2px;
+}
+p, span {
+    color: #ffffffe7;
+}
+
+span {
+    font-size: 1.2rem;
+}
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+
+    height: fit-content;
+
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100dvh;
+
+    gap: 5%;
+    padding: 0px 7rem;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.2rem;
+    max-width: 48%;
+}
+
+#info h1 {
+    font-size: 4rem;
+    line-height: calc(4rem * 1.1);
+}
+#info p {
+    font-size: 1.6rem;
+    line-height: calc(1.6rem * 1.4);
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    max-width: 40%;
+    max-height: 70%;
+    
+}
+
+#projects h2 {
+    align-self: center;
+
+    font-size: 2.4rem;
+    color: #fffffff1;
+}
+
+#project-container {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 1rem;
+
+    gap: 1.2rem;
+}
+::-webkit-scrollbar-thumb {
+    background: #ebebeb;
+    border-radius: 50px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background-color: rgb(43, 43, 43);
+}
+.project-card {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+
+    max-height: 126px;
+    min-height: 126px;
+    padding: 2rem;
+
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 126px;
+    width: 100%;
+    max-height: 126px;
+    object-fit: contain;
+    scale: 1.4;
+}
+
+.project-info p {
+    max-width: 200px;
+    margin-bottom: 1.2rem;
+}
+
+.project-text {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+}
+
+button {
+    background-color: #00000071;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #00000033;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+    padding: 2rem;
+    height: 14%;
+    text-align: center;
+}
+
+.footer-content {
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-info img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: grayscale();
+    margin-right: 10px;
+}
+
+.contact-info p {
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+
+
+#details-container {
+    position: absolute;
+    top: 0;
+
+    display: grid;
+    grid-template-rows: 20% 80%;
+
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    z-index: 2;
+}
+
+#details-container > header {
+    display: flex;
+    align-items: center;
+
+    padding-left: 3.8rem;
+    gap: 2.6rem;
+}
+
+#details-container > header > a > img {
+    max-width: 35px;
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+#details-container > header > img {
+    max-width: 131px;
+}
+#details-container > header > nav {
+    display: flex;
+    gap: 1.2rem;
+}
+
+#details-container > header #sandwich-menu-button {
+    display: none;
+}
+
+#details-container > header > nav > a {
+    padding: 0.6rem 2.7rem;
+    border-radius: 1rem;
+
+    font-size: 1.8rem;
+    background-color: #ffffff88;
+    cursor: pointer;
+}
+.tab-active {
+    background-color: #ffffffef !important;
+}
+
+#details-main {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 10.5rem 7rem;
+}
+#details-main > img {
+    width: 45%;
+    object-fit: contain; 
+}
+#details-main > div {
+    padding-top: 2rem;
+
+    width: 45%;
+    height: 100%;
+}
+#details-main > div > h3 {
+    font-size: 3.8rem;
+    letter-spacing: -2px;
+    padding-bottom: 1.0rem;
+}
+#details-main > div > p {
+    font-size: 1.8rem;
+    line-height: calc(1.4*1.8rem);
+    max-width: 500px;
+}
+
+
+
+
+
+
+@media (max-width: 1030px) {
+    h1 {
+        font-size: 3.5rem !important;
+        max-width: 500px;
+    }
+    p {
+        font-size: 1.5rem !important;
+        
+    }
+
+    #info p {
+        max-width: 640px;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+    main {
+        height: fit-content;
+        flex-direction: column;
+        padding: 7rem 4% 0;
+        gap: 6rem;
+    }
+
+    #info {
+        max-width: 100%;
+    }
+
+    #projects {
+        max-width: 100%;
+        max-height: fit-content;
+    }
+
+    #project-container {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        max-height: fit-content;
+
+        padding-bottom: 3rem;
+    }
+
+    .project-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: fit-content;
+
+        padding: 2rem 4rem;
+    }
+
+    .project-card img {
+        max-width: 150px;
+        margin: 0;
+        scale: 1.2;
+    }
+    .project-card p {
+        min-width: 200px !important;
+        max-width: 200px;
+    }
+
+    footer {
+        position: relative;
+    }
+
+
+
+
+
+
+
+    #details-container {
+        position: fixed;
+        top: 0;
+    
+        display: grid;
+        grid-template-rows: 20% 80%;
+    
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    
+        z-index: 2;
+    }
+    
+    #details-container > header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    
+        padding: 0 3.8rem;
+        gap: 2.6rem;
+    }
+    
+    #details-container > header > a > img {
+        max-width: 35px;
+        opacity: 0.95;
+        cursor: pointer;
+    }
+    
+    #details-container > header > img {
+        max-width: 131px;
+    }
+    #details-container > header > nav {
+        position: absolute;
+        right: 0;
+        top: 100%;
+
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: #0000003d;
+        padding: 1rem 2rem 2rem;
+        border-bottom-left-radius: 35px;
+    }
+    
+    #details-container > header > nav > a {
+        text-align: center;
+        padding: 0.6rem 2.2rem;
+        border-radius: 1rem;
+    
+        font-size: 1.8rem;
+        background-color: #a5a5a5;
+        cursor: pointer;
+    }
+    .tab-active {
+        background-color: #ffffffef !important;
+    }
+
+
+    #sandwich-menu-button {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+    }
+    #input-nav {
+        display: none;
+    }
+    #label-nav {
+        display: block;
+        align-self: flex-end;
+
+        min-width: 35px;
+        min-height: 35px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../images/menu-hamburguer.svg') !important;
+    }
+    :has(#input-nav:checked) #label-nav {
+        background-image: url('../images/x.svg') !important;
+    }
+    :has(#input-nav:checked) nav {
+        display: flex;        
+    }
+    :has(#label-nav) body{
+        overflow-y: hidden;
+    }
+
+
+    
+    #details-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        width: 100%;
+        height: 100%;
+        padding: 0 5rem;
+        gap: 4rem;
+    }
+    #details-main > img {
+        width: 100%;
+        object-fit: contain; 
+        padding-bottom: 5rem;
+    }
+    #details-main > div {
+        padding-top: 2rem;
+    
+        width: 100%;
+        height: 100%;
+    }
+    #details-main > div > h3 {
+        font-size: 3.8rem;
+        letter-spacing: -2px;
+        padding-bottom: 1.0rem;
+    }
+    #details-main > div > p {
+        font-size: 1.8rem;
+        line-height: calc(1.4*1.8rem);
+        max-width: 500px;
+    }
+}
